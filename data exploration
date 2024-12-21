@@ -1,0 +1,13 @@
+
+library(dplyr)
+library(tidyverse)
+
+
+
+
+dig.df<-read.csv("DIG.CSV")
+
+colSums(is.na(dig.df))
+
+dig.df<- dig.df|>select(ID,TRTMT,AGE,SEX,BMI,KLEVEL,CREAT,DIABP,SYSBP,HYPERTEN,CVD,WHF,DIG,HOSP,HOSPDAYS, DEATH,DEATHDAY)
+head(dig.df)
